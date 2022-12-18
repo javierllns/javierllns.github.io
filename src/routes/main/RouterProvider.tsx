@@ -11,7 +11,7 @@ const router = createBrowserRouter(
       children: [{ path: "/sample", element: <div>Sample page within main layout</div> }],
     },
   ],
-  { basename: "/portfolio_a/" }
+  { basename: "/" }
 );
 
 export const MainRouterProvider = () => {
