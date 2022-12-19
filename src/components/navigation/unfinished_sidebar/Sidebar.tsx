@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { useClassNames, useListenWindowResize } from "../../../hooks";
+import { useClassNames, useDeviceType } from "../../../hooks"; //TO_DO useDeviceType must be called on top of the application tree, preferably inside a context.
 import styles from "./Sidebar.module.css";
 
-export const Sidebar = () => {
+export const UnfinishedSidebar = () => {
   const classes = useClassNames(styles);
-  const { width: viewportWidth } = useListenWindowResize();
+  const { deviceType } = useDeviceType();
   const [showSidebar, setShowSidebar] = useState(false);
 
   const handleToggleSidebar = () => {
@@ -12,10 +12,10 @@ export const Sidebar = () => {
   };
 
   useEffect(() => {
-    if (viewportWidth && viewportWidth > 1280) {
+    if (deviceType === "desktopL") {
       setShowSidebar(true);
     }
-  }, [viewportWidth]);
+  }, [deviceType]);
 
   return (
     <div className={classes({ mainContainer: true, collapseMainContainer: !showSidebar })}>
@@ -32,4 +32,4 @@ export const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default UnfinishedSidebar;

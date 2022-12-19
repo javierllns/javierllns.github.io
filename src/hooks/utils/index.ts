@@ -1,2 +1,2 @@
 export * from "./useClassNames";
-export * from "./useListenWindowResize";
+export * from "./useDeviceType";
