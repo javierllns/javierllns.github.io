@@ -14,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         )}
       >
         HOLA!
+        <script src="https://gist.github.com/javierllns/68a3320f8cc73949c8bd844fa61072e0.js"></script>
       </h1>
     </div>
   </React.StrictMode>
