@@ -1,0 +1,37 @@
+---
+import NavItem from "./NavItem.astro"
+---
+
+<nav>
+	<ul>
+		<li>
+			<NavItem title="Introduction" ref=""/>
+		</li>
+		<li>
+			<NavItem title="Work" ref=""/>
+		</li>
+		<li>
+			<NavItem title="Technologies" ref=""/>
+		</li>
+		<li>
+			<NavItem title="Tooling" ref=""/>
+		</li>
+		<li>
+			<NavItem title="Projects" ref=""/>
+		</li>
+	</ul>
+</nav>
+
+<style>
+	nav	{
+		width: 100%;
+	}
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	li {
+		list-style: none;
+	}
+</style>

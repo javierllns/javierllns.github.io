@@ -1,0 +1,16 @@
+---
+interface Props {
+	title: string
+	ref: string
+}
+
+const {title, ref} = Astro.props
+---
+
+<a href={ref}>{title}</a>
+
+<style>
+	a {
+		text-decoration: none;
+	}
+</style>
