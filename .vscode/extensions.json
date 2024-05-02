@@ -1,8 +1,0 @@
-{
-  "recommendations": [
-    "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss",
-    "austenc.tailwind-docs",
-    "moalamri.inline-fold"
-  ]
-}
