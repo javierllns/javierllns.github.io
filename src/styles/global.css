@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
@@ -56,6 +56,54 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+  }
+} */
+
+/*Big Natural Indigo*/
+@layer base {
+  :root {
+    --background: 210.57 29.91% 5.92%;
+    --foreground: 196.98 31.78% 74.71%;
+    --muted: 232.5 15.44% 18.32%;
+    --muted-foreground: 233.79 11.37% 50%;
+    --popover: 234.55 17.46% 12.35%;
+    --popover-foreground: 234 12.4% 52.55%;
+    --card: 221.89 23.91% 11.17%;
+    --card-foreground: 229.76 31.78% 74.71%;
+    --border: 215.09 15.15% 16.7%;
+    --input: 232 20% 14.71%;
+    --primary: 190.05 100% 13.85%;
+    --primary-foreground: 190.05 100% 50%;
+    --secondary: 199.25 15.44% 8%;
+    --secondary-foreground: 194.72 23.51% 78.88%;
+    --accent: 234.55 17.83% 9.47%;
+    --accent-foreground: 0 0% 82.75%;
+    --destructive: 1.58 68.89% 12.3%;
+    --destructive-foreground: 360 100% 66.89%;
+    --ring: 190.14 100% 13.92%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210.57 29.91% 5.92%;
+    --foreground: 196.98 31.78% 74.71%;
+    --muted: 232.5 15.44% 18.32%;
+    --muted-foreground: 233.79 11.37% 50%;
+    --popover: 234.55 17.46% 12.35%;
+    --popover-foreground: 234 12.4% 52.55%;
+    --card: 221.89 23.91% 11.17%;
+    --card-foreground: 229.76 31.78% 74.71%;
+    --border: 215.09 15.15% 16.7%;
+    --input: 232 20% 14.71%;
+    --primary: 190.05 100% 13.85%;
+    --primary-foreground: 190.05 100% 50%;
+    --secondary: 199.25 15.44% 8%;
+    --secondary-foreground: 194.72 23.51% 78.88%;
+    --accent: 234.55 17.83% 9.47%;
+    --accent-foreground: 0 0% 82.75%;
+    --destructive: 1.58 68.89% 12.3%;
+    --destructive-foreground: 360 100% 66.89%;
+    --ring: 190.14 100% 13.92%;
   }
 }
 
