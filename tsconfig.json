@@ -4,9 +4,12 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
+      "@styles/*": ["./src/styles/*"],
       "@components/*": ["./src/components/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@pages/*": ["./src/pages/*"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
