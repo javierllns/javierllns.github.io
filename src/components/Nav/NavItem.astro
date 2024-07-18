@@ -9,6 +9,10 @@ interface Props {
 const {title, ref} = Astro.props
 ---
 
-<Button className="p-6" variant={"ghost"}>
-	<a class="text-xl" href={ref}>{title}</a>
-</Button>
+
+	<a href={ref}>
+		<Button className="p-6 text-xl" variant={"ghost"}>
+			{title}
+		</Button>
+	</a>
+
