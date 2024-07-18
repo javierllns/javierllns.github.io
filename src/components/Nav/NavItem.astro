@@ -1,4 +1,6 @@
 ---
+import {Button} from "@components/lib/ui/button"
+
 interface Props {
 	title: string
 	ref: string
@@ -7,4 +9,6 @@ interface Props {
 const {title, ref} = Astro.props
 ---
 
-<a href={ref}>{title}</a>
+<Button className="p-6" variant={"ghost"}>
+	<a class="text-xl" href={ref}>{title}</a>
+</Button>
