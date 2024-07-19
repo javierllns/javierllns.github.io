@@ -19,7 +19,7 @@ export default function Intro() {
       <div
         className={cn(
           'parallax rotate-45',
-          'absolute top-60 left-[70%]',
+          'absolute top-72 left-[70%]',
           'h-[90px] w-[90px] box bg-blue-200 rounded-full'
         )}
         data-rellax-speed='-5'
