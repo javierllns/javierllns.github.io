@@ -17,27 +17,27 @@ export default function Intro() {
   return (
     <div className='relative'>
       <ParallaxProvider>
-        <div className={'relative  h-[500px] overflow-hidden'}>
+        <div className={'relative  h-[500px] xoverflow-hidden'}>
           <Parallax speed={-10} className='absolute top-60 left-[20%]'>
-            <div className='size-[70px] bg-red-200' />
+            <div className='size-[70px] bg-red-200 rounded-full' />
           </Parallax>
 
-          <Parallax speed={21} className='absolute top-32 left-[50%]'>
-            <div className='size-[70px] bg-green-200' />
+          <Parallax speed={21} className='absolute top-48 left-[50%]'>
+            <div className='size-[70px] bg-green-200 rounded-full' />
           </Parallax>
 
           <Parallax
             easing={'easeInOut'}
             opacity={[10, 100]}
-            translateX={['20px', '300px']}
-            speed={21}
+            //translateX={['20px', '300px']}
+            speed={-21}
             className='absolute bottom-32 left-[50%]'
           >
-            <div className='size-[70px] bg-orange-200' />
+            <div className='size-[70px] bg-orange-200 rounded-full' />
           </Parallax>
 
           <Parallax speed={-15} className='absolute top-72 right-[20%]'>
-            <div className='size-[70px] bg-blue-200' />
+            <div className='size-[70px] bg-blue-200 rounded-full' />
           </Parallax>
         </div>
       </ParallaxProvider>

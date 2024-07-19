@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Button } from '@components/lib/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@components/lib/ui/sheet'
+import { MenuIcon } from 'lucide-react'
+import { Separator } from '@components/lib/ui/separator'
 
 export const Nav: React.FC = () => {
   const [openOffCanvasMenu, setOpenOffCanvasMenu] = useState(false)
@@ -47,7 +49,7 @@ export const Nav: React.FC = () => {
   }
 
   return (
-    <nav className='w-fit h-full'>
+    <nav className='w-fit h-full flex items-center'>
       <div className='hidden lg:block'>
         <Locations />
       </div>
@@ -59,10 +61,15 @@ export const Nav: React.FC = () => {
             setOpenOffCanvasMenu(open)
           }}
         >
-          <SheetTrigger>Open</SheetTrigger>
-          <SheetContent side='top' id='off-canvas-menu'>
+          <SheetTrigger asChild>
+            <Button variant={'ghost'} className='size-fit p-4'>
+              <MenuIcon size={28} strokeWidth={2.25} />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side='top' id='off-canvas-menu' className='rounded-b-3xl'>
             <SheetHeader>
-              <SheetTitle>Site map</SheetTitle>
+              <SheetTitle className='text-2xl uppercase font-bold'>Navigation</SheetTitle>
+              <Separator />
               <Locations />
             </SheetHeader>
           </SheetContent>
