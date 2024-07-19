@@ -26,6 +26,16 @@ export default function Intro() {
             <div className='size-[70px] bg-green-200' />
           </Parallax>
 
+          <Parallax
+            easing={'easeInOut'}
+            opacity={[10, 100]}
+            translateX={['20px', '300px']}
+            speed={21}
+            className='absolute bottom-32 left-[50%]'
+          >
+            <div className='size-[70px] bg-orange-200' />
+          </Parallax>
+
           <Parallax speed={-15} className='absolute top-72 right-[20%]'>
             <div className='size-[70px] bg-blue-200' />
           </Parallax>
