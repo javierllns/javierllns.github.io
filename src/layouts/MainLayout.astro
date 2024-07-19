@@ -18,14 +18,14 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col items-center">
+	<body id="body" class="flex flex-col items-center">
 		<header class="p-4 z-50 h-20 w-full bg-background/30 backdrop-blur-lg sticky top-0 flex items-center justify-between flex-row-reverse lg:flex-row">
 			<h1 class="text-xl font-bold text-accent-foreground">JAVIER's dev Portfolio</h1>
 			<Nav client:only="react"/>
 			<h1 class="hidden lg:block">Download CV</h1>
 		</header>
 
-		<main class="container px-4">
+		<main class="container px-0">
 			<slot />
 		</main>
 	</body>
