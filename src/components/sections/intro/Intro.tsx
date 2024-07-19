@@ -1,4 +1,5 @@
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
+import { ParticlesComponent } from './Particles'
 
 // const BlurredItem: React.FC<{ children: React.ReactNode; className?: string; blurClassName?: string }> = ({
 //   children,
@@ -17,7 +18,9 @@ export default function Intro() {
   return (
     <div className='relative'>
       <ParallaxProvider>
-        <div className={'relative  h-[500px] xoverflow-hidden'}>
+        <div className={'relative h-[500px]'}>
+          <ParticlesComponent className='absolute size-full' />
+
           <Parallax speed={-10} className='absolute top-60 left-[20%]'>
             <div className='size-[70px] bg-red-200 rounded-full' />
           </Parallax>
