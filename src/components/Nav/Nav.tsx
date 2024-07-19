@@ -15,7 +15,7 @@ export const Nav: React.FC = () => {
             setOpenOffCanvasMenu(false)
           }}
           variant={'ghost'}
-          className='h-fit text-xl rounded-none hover:bg-transparent hover:border-b-4 hover:border-accent-foreground'
+          className='h-full text-xl rounded-none hover:bg-transparent hover:border-b-4 hover:border-accent-foreground'
         >
           {title}
         </Button>
@@ -25,7 +25,7 @@ export const Nav: React.FC = () => {
 
   const Locations = () => {
     return (
-      <ul className='flex flex-col h-full lg:flex-row'>
+      <ul className='flex flex-col h-full lg:flex-row gap-2'>
         <li>
           <NavItem title='About me' href='#introduction' />
         </li>
