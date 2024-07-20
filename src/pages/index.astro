@@ -2,6 +2,7 @@
 import Layout from '@layouts/MainLayout.astro';
 import Intro from '@/components/sections/intro/Intro'
 import '@styles/global.css'
+import { Separator } from '@components/lib/ui/separator';
 ---
 
 <Layout title="Javier's Portfolio">
@@ -9,22 +10,22 @@ import '@styles/global.css'
 			<section id='title' class="scroll-mt-20">
 				<Intro  client:only="react"/>
 			</section>
-			<section class="scroll-mt-20 bg-gradient-to-t from-card to-card/60 backdrop-blur-md z-2 p-8 h-[500px] flex flex-col items-center rounded-t-[50px] border-t-2 sm:rounded-t-[150px] sm:border-t-4" id='introduction'>
+			<section class="z-10 scroll-mt-24 bg-gradient-to-t from-card to-card/30 backdrop-blur-sm p-8 h-[500px] flex flex-col items-center rounded-t-[50px] border-t-2 sm:rounded-t-[150px] sm:border-t-4 shadow-2xl shadow-blue-500/50" id='introduction'>
 				<h1 class="text-2xl font-bold">About me</h1>
 			</section>
-			<section class="scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center" id='work'>
+			<section class="z-10 scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center" id='work'>
 				<h1 class="text-2xl font-bold">Work resume</h1>
 			</section>
-			<section class="scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center" id='stack'>
+			<section class="z-10 scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center" id='stack'>
 				<h1 class="text-2xl font-bold">Tech Stack</h1>
 			</section>
-			<section class="scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center" id='tooling'>
+			<section class="z-10 scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center" id='tooling'>
 				<h1 class="text-2xl font-bold">Daily tooling</h1>
 			</section>
-			<section class="scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center" id='projects'>
+			<section class="z-10 scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center" id='projects'>
 				<h1 class="text-2xl font-bold">Projects</h1>
 			</section>
-			<section class="scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center rounded-b-3xl mb-40" id='contact'>
+			<section class="z-10 scroll-mt-20 bg-card p-8 h-[500px] flex flex-col items-center rounded-b-3xl mb-40" id='contact'>
 				<h1 class="text-2xl font-bold">Contact</h1>
 			</section>
 		</div>
