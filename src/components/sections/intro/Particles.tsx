@@ -108,7 +108,7 @@ export const ParticlesComponent: FC<{ className?: string; canvasStyle?: React.CS
   const options: ISourceOptions = useMemo(
     () => ({
       fullScreen: {
-        enable: false
+        enable: true
       },
       background: {
         color: '#0000000'
