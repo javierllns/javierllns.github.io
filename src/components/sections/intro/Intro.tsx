@@ -18,7 +18,16 @@ export default function Intro() {
   return (
     <div className='size-full'>
       <ParallaxProvider>
-        <div className={'relative size-full'}>
+        <div className={'relative size-full flex items-center justify-center'}>
+          <div className='flex flex-col items-center gap-2'>
+            <h1 className='px-14 text-center bg-gradient-to-r from-zinc-500 via-white to-blue-100 text-transparent bg-clip-text text-6xl font-black sm:text-6xl md:text-7xl lg:text-8xl sm:font-bold'>
+              JAVIER LLANOS
+            </h1>
+            <p className='lg:text-xl z-10 font-extrabold bg-white text-transparent bg-clip-text'>
+              FULL-STACK DEVELOPER
+            </p>
+          </div>
+
           <ParticlesComponent className='absolute size-full' />
 
           <Parallax speed={-25} className='absolute top-60 left-[20%]'>

@@ -1,7 +1,7 @@
 ---
 import { Nav } from '@components/Nav/Nav';
 import { Button } from '@components/lib/ui/button';
-import { ArrowUpIcon } from 'lucide-react';
+import { ArrowUpIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
 
 interface Props {
 	title: string;
@@ -22,12 +22,12 @@ const { title } = Astro.props;
 	</head>
 	<body id="body" class="flex flex-col items-center dark">
 		<header id="page-header" class="p-4 z-50 w-full fixed top-0">
-			<div class="w-full max-w-screen-2xl sm:px-8 flex flex-row-reverse lg:flex-row items-center justify-between mx-auto">
+			<div class="w-full max-w-screen-2xl sm:px-8 flex flex-row-reverse xl:flex-row items-center justify-between mx-auto">
 				<a href="#title">
-					<h1 class="text-xl font-bold text-accent-foreground">JAVIER's dev Portfolio</h1>
+					<h1 class="text-xl font-bold text-accent-foreground flex flex-row gap-2"> @javierllns <GithubIcon/><LinkedinIcon/></h1>
 				</a>
 				<Nav client:only="react"/>
-				<h1 class="hidden lg:block text-xl font-bold text-accent-foreground">Download CV</h1>
+				<h1 class="hidden xl:block text-xl font-bold text-accent-foreground">Download CV</h1>
 			</div>
 		</header>
 

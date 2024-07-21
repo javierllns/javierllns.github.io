@@ -25,7 +25,7 @@ export const Nav: React.FC = () => {
 
   const Locations = () => {
     return (
-      <ul className='flex flex-col h-full lg:flex-row gap-2'>
+      <ul className='flex flex-col h-full xl:flex-row gap-2'>
         <li>
           <NavItem title='About me' href='#introduction' />
         </li>
@@ -50,11 +50,11 @@ export const Nav: React.FC = () => {
 
   return (
     <nav className='w-fit h-full flex items-center'>
-      <div className='hidden lg:block'>
+      <div className='hidden xl:block'>
         <Locations />
       </div>
 
-      <div className='lg:hidden'>
+      <div className='xl:hidden'>
         <Sheet
           open={openOffCanvasMenu}
           onOpenChange={(open) => {
