@@ -16,9 +16,9 @@ import { ParticlesComponent } from './Particles'
 
 export default function Intro() {
   return (
-    <div>
+    <div className='size-full'>
       <ParallaxProvider>
-        <div className={'relative h-[500px]'}>
+        <div className={'relative size-full'}>
           <ParticlesComponent className='absolute size-full' />
 
           <Parallax speed={-25} className='absolute top-60 left-[20%]'>

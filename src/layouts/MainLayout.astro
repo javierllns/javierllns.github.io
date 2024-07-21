@@ -33,7 +33,7 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 
-		<a href="#title" class="z-50 fixed bottom-[10%] right-[10%]">
+		<a id="go-up" href="#title" class="z-50 fixed bottom-[10%] right-[10%]">
 			<Button variant={'outline'} className='rounded-full size-fit p-4'><ArrowUpIcon  /></Button>
 		</a>
 	</body>
@@ -43,9 +43,21 @@ const { title } = Astro.props;
 
 <script>
 	window.addEventListener(`scroll`, function (e) {
+		const scrollOpa = this.scrollY / 200
 		const header = document.getElementById("page-header");
-		if(!header)return
-  	const scrollOpa = this.scrollY / 200;
-  	header.style.backgroundColor = `hsl(var(--card) / ${scrollOpa})`;
+		const goUpButton = document.getElementById("go-up");
+
+		if(header){
+			header.style.backgroundColor = `hsl(var(--card) / ${scrollOpa})`;
+		};
+
+		if(goUpButton){
+			if(scrollOpa == 0){
+				goUpButton.style.display = 'none';
+			}
+			if(scrollOpa > 0){
+				goUpButton.style.display = 'block';
+			}
+		};
 });
 </script>
