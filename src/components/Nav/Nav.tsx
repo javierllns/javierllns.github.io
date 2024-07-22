@@ -15,7 +15,7 @@ export const Nav: React.FC = () => {
             setOpenOffCanvasMenu(false)
           }}
           variant={'ghost'}
-          className='h-full text-xl rounded-none hover:bg-transparent border-b-4 border-transparent hover:border-b-4 hover:border-accent-foreground'
+          className='xl:px-4 lg:px-3 sm:px-2 h-full text-xl rounded-none hover:bg-transparent border-b-4 border-transparent hover:border-b-4 hover:border-accent-foreground'
         >
           {title}
         </Button>
@@ -25,7 +25,7 @@ export const Nav: React.FC = () => {
 
   const Locations = () => {
     return (
-      <ul className='flex flex-col h-full xl:flex-row gap-2'>
+      <ul className='flex flex-col h-full md:flex-row gap-0'>
         <li>
           <NavItem title='About me' href='#introduction' />
         </li>
@@ -50,11 +50,11 @@ export const Nav: React.FC = () => {
 
   return (
     <nav className='w-fit h-full flex items-center'>
-      <div className='hidden xl:block'>
+      <div className='hidden md:block'>
         <Locations />
       </div>
 
-      <div className='xl:hidden'>
+      <div className='md:hidden'>
         <Sheet
           open={openOffCanvasMenu}
           onOpenChange={(open) => {
