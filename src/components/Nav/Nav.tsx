@@ -78,7 +78,7 @@ export const Nav: React.FC = () => {
               <SheetTitle className='pb-2 text-2xl font-bold uppercase'>
                 Navigation
               </SheetTitle>
-              <Separator />
+              <Separator className='!mb-3' />
               <Locations />
             </SheetHeader>
           </SheetContent>

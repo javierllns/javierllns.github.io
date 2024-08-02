@@ -1,4 +1,3 @@
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
 import { ParticlesComponent } from './Particles'
 
 // const BlurredItem: React.FC<{ children: React.ReactNode; className?: string; blurClassName?: string }> = ({
@@ -17,36 +16,22 @@ import { ParticlesComponent } from './Particles'
 export default function Intro() {
   return (
     <div className='size-full'>
-      <ParallaxProvider>
-        <div className={'relative size-full flex items-center justify-center'}>
-          <div className='flex flex-col items-center gap-2'>
-            <h1 className='px-14 text-center bg-gradient-to-r from-zinc-500 via-white to-blue-100 text-transparent bg-clip-text text-6xl font-black sm:text-6xl md:text-7xl lg:text-8xl sm:font-bold'>
-              JAVIER LLANOS
-            </h1>
-            <p className='lg:text-xl z-10 font-extrabold bg-white text-transparent bg-clip-text'>
-              FULL-STACK DEVELOPER
-            </p>
-          </div>
+      <div className={'flex size-full items-center justify-center'}>
+        <ParticlesComponent className='absolute size-full' />
 
-          <ParticlesComponent className='absolute size-full' />
+        <div className='relative flex flex-col items-center gap-2'>
+          <h1 className='bg-gradient-to-r from-zinc-500 via-white to-blue-100 bg-clip-text px-14 text-center text-6xl font-black text-transparent sm:text-6xl sm:font-bold md:text-7xl lg:text-8xl'>
+            JAVIER LLANOS
+          </h1>
 
-          <Parallax speed={-25} className='absolute top-60 left-[20%]'>
-            <div className='size-[50px] bg-gradient-to-bl from-orange-800 from-5% via-black to-black rounded-full shadow-orange-500 shadow-2xl' />
-          </Parallax>
+          <p className='z-10 bg-white bg-clip-text font-extrabold text-transparent lg:text-xl'>
+            FULL-STACK DEVELOPER
+          </p>
 
-          <Parallax speed={21} className='absolute top-48 left-[50%]'>
-            <div className='size-[70px] bg-gradient-to-tr from-zinc-800 from-5% via-black to-black shadow-white shadow-lg rounded-full' />
-          </Parallax>
-
-          <Parallax speed={-25} className='absolute bottom-0 left-[50%]'>
-            <div className='size-[30px] bg-gradient-to-b from-green-900 from-5% via-black to-black rounded-full shadow-green-500 shadow-inner' />
-          </Parallax>
-
-          <Parallax speed={-25} className='absolute top-72 right-[20%]'>
-            <div className='size-[20px]  bg-gradient-to-tl from-black from-30% via-blue-900 to-zinc-500 rounded-full shadow-blue-500 shadow-inner' />
-          </Parallax>
+          <div className='absolute -top-28 right-[25%] size-[70px] rounded-full bg-gradient-to-tr from-zinc-800 from-5% via-black to-black shadow-lg shadow-white' />
+          <div className='absolute -bottom-36 left-[15%] size-[50px] rounded-full bg-gradient-to-bl from-orange-800 from-5% via-black to-black shadow-2xl shadow-orange-500' />
         </div>
-      </ParallaxProvider>
+      </div>
     </div>
   )
 }
