@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import { Button } from '@components/lib/ui/button'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@components/lib/ui/sheet'
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger
+} from '@components/lib/ui/sheet'
 import { MenuIcon } from 'lucide-react'
 import { Separator } from '@components/lib/ui/separator'
 
@@ -15,7 +21,7 @@ export const Nav: React.FC = () => {
             setOpenOffCanvasMenu(false)
           }}
           variant={'ghost'}
-          className='xl:px-4 lg:px-3 sm:px-2 h-full text-xl rounded-none hover:bg-transparent border-b-4 border-transparent hover:border-b-4 hover:border-accent-foreground'
+          className='h-full rounded-none border-b-4 border-transparent text-xl hover:border-b-4 hover:border-accent-foreground hover:bg-transparent sm:px-2 lg:px-3 xl:px-4'
         >
           {title}
         </Button>
@@ -25,7 +31,7 @@ export const Nav: React.FC = () => {
 
   const Locations = () => {
     return (
-      <ul className='flex flex-col h-full md:flex-row gap-0'>
+      <ul className='flex h-full flex-col gap-2 md:flex-row md:gap-0'>
         <li>
           <NavItem title='About me' href='#introduction' />
         </li>
@@ -49,13 +55,14 @@ export const Nav: React.FC = () => {
   }
 
   return (
-    <nav className='w-fit h-full flex items-center'>
+    <nav className='flex h-full w-fit items-center'>
       <div className='hidden md:block'>
         <Locations />
       </div>
 
       <div className='md:hidden'>
         <Sheet
+          modal={true}
           open={openOffCanvasMenu}
           onOpenChange={(open) => {
             setOpenOffCanvasMenu(open)
@@ -66,9 +73,11 @@ export const Nav: React.FC = () => {
               <MenuIcon size={28} strokeWidth={2.25} />
             </Button>
           </SheetTrigger>
-          <SheetContent side='top' id='off-canvas-menu' className='rounded-b-3xl'>
+          <SheetContent side='top' id='off-canvas-menu' className='rounded-b-lg p-10'>
             <SheetHeader>
-              <SheetTitle className='text-2xl uppercase font-bold'>Navigation</SheetTitle>
+              <SheetTitle className='pb-2 text-2xl font-bold uppercase'>
+                Navigation
+              </SheetTitle>
               <Separator />
               <Locations />
             </SheetHeader>

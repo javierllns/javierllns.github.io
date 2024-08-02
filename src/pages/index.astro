@@ -1,28 +1,26 @@
 ---
 import Layout from '@layouts/MainLayout.astro'
 import Intro from '@components/sections/intro/Intro'
+import Section from '@components/sections/BaseSection.astro'
 import '@styles/global.css'
 ---
 
 <Layout title="Javier's Portfolio">
   <div class='flex flex-col'>
-    <section id='title' class='h-[500px] scroll-mt-20'>
+    <section id='title' class='h-[100vh] scroll-mt-20'>
       <Intro client:only='react' />
     </section>
     <div
-      class='z-10 mb-40 rounded-[50px] border-b-2 border-t-2 shadow-2xl shadow-blue-500/10 sm:rounded-[150px] sm:border-t-4'
+      class='z-10 mb-40 rounded-[50px] border-b-2 border-t-2 shadow-2xl shadow-blue-500/10 sm:rounded-[7vw] sm:border-t-4'
     >
-      <section
+      <Section
         id='introduction'
-        class='flex h-fit min-h-[150px] scroll-mt-28 flex-col items-center rounded-t-[50px] bg-gradient-to-t from-card to-card/30 p-8 backdrop-blur-sm sm:rounded-t-[150px] sm:px-16'
+        class='min-h-[150px] scroll-mt-28 rounded-t-[50px] bg-transparent bg-gradient-to-t from-card to-card/30 backdrop-blur-sm sm:rounded-t-[7vw]'
       >
         <h1 class='text-2xl font-bold'>About me</h1>
-      </section>
+      </Section>
 
-      <section
-        class='flex h-fit scroll-mt-20 flex-col items-center bg-card p-8 sm:px-16'
-        id='work'
-      >
+      <Section id='work'>
         <h1 class='text-2xl font-bold'>Work resume</h1>
 
         <div class='relative'>
@@ -130,12 +128,9 @@ import '@styles/global.css'
             </li>
           </ol>
         </div>
-      </section>
+      </Section>
 
-      <section
-        class='flex h-fit scroll-mt-20 flex-col items-center bg-card p-8 sm:px-16'
-        id='stack'
-      >
+      <Section id='stack'>
         <h1 class='mb-6 text-2xl font-bold'>Tech Stack</h1>
 
         <div class='relative flex flex-col items-center xl:w-[60%]'>
@@ -243,26 +238,19 @@ import '@styles/global.css'
             <p>Cypress</p>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section
-        class='flex h-fit scroll-mt-20 flex-col items-center bg-card p-8 sm:px-16'
-        id='tooling'
-      >
+      <Section id='tooling'>
         <h1 class='text-2xl font-bold'>Daily tooling</h1>
-      </section>
-      <section
-        class='flex h-fit scroll-mt-20 flex-col items-center bg-card p-8 sm:px-16'
-        id='projects'
-      >
+      </Section>
+
+      <Section id='projects'>
         <h1 class='text-2xl font-bold'>Projects</h1>
-      </section>
-      <section
-        class='flex h-fit min-h-[150px] scroll-mt-20 flex-col items-center rounded-b-[50px] bg-card p-8 sm:rounded-b-[150px] sm:px-16'
-        id='contact'
-      >
+      </Section>
+
+      <Section id='contact' class='min-h-[150px] rounded-b-[50px] sm:rounded-b-[7vw]'>
         <h1 class='text-2xl font-bold'>Contact</h1>
-      </section>
+      </Section>
     </div>
   </div>
 </Layout>
