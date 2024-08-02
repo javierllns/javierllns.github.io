@@ -35,7 +35,10 @@ export default function Intro() {
 
             <div className='flex gap-2'>
               <a href='/resume_cv_EN.pdf' download>
-                <Button variant='default' className='flex items-center gap-2 px-4 py-6'>
+                <Button
+                  variant='default'
+                  className='flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-700 to-amber-500 px-4 py-6 hover:opacity-90'
+                >
                   <FileDownIcon />
                   <h1 className='font-base flex flex-row items-center gap-2 py-1 text-lg'>
                     EN
@@ -43,7 +46,10 @@ export default function Intro() {
                 </Button>
               </a>
               <a href='/resume_cv_ES.pdf' download>
-                <Button variant='secondary' className='flex items-center gap-2 px-4 py-6'>
+                <Button
+                  variant='secondary'
+                  className='flex items-center gap-2 rounded-xl px-4 py-6'
+                >
                   <FileDownIcon />
                   <h1 className='font-base flex flex-row items-center gap-2 py-1 text-lg'>
                     ES
