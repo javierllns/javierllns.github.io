@@ -29,7 +29,7 @@ export default function Intro() {
           </p>
 
           <div className='absolute -top-28 right-[25%] size-[70px] rounded-full bg-gradient-to-tr from-zinc-800 from-5% via-black to-black shadow-lg shadow-white' />
-          <div className='absolute -bottom-36 left-[15%] size-[50px] rounded-full bg-gradient-to-bl from-orange-800 from-5% via-black to-black shadow-2xl shadow-orange-500' />
+          <div className='absolute -bottom-36 left-[15%] size-[50px] rounded-full bg-gradient-to-bl from-amber-800 from-5% via-black to-black shadow-2xl shadow-orange-500' />
         </div>
       </div>
     </div>

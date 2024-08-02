@@ -21,7 +21,7 @@ export const Nav: React.FC = () => {
             setOpenOffCanvasMenu(false)
           }}
           variant={'ghost'}
-          className='h-full rounded-none border-b-4 border-transparent text-xl hover:border-b-4 hover:border-accent-foreground hover:bg-transparent sm:px-2 lg:px-3 xl:px-4'
+          className='h-full rounded-none border-b-4 border-transparent text-xl hover:border-b-4 hover:border-primary hover:bg-transparent sm:px-2 lg:px-3 xl:px-4'
         >
           {title}
         </Button>
