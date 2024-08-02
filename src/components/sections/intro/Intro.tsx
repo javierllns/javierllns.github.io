@@ -1,4 +1,6 @@
 import { ParticlesComponent } from './Particles'
+import { Button } from '@components/lib/ui/button'
+import { FileDownIcon } from 'lucide-react'
 
 // const BlurredItem: React.FC<{ children: React.ReactNode; className?: string; blurClassName?: string }> = ({
 //   children,
@@ -20,13 +22,36 @@ export default function Intro() {
         <ParticlesComponent className='absolute size-full' />
 
         <div className='relative flex flex-col items-center gap-2'>
-          <h1 className='bg-gradient-to-r from-zinc-500 via-white to-blue-100 bg-clip-text px-14 text-center text-6xl font-black text-transparent sm:text-6xl sm:font-bold md:text-7xl lg:text-8xl'>
+          <h1 className='bg-gradient-to-r from-zinc-500 via-white to-blue-100 bg-clip-text px-14 text-center text-7xl font-black text-transparent sm:text-6xl sm:font-bold md:text-7xl lg:text-8xl'>
             JAVIER LLANOS
           </h1>
 
-          <p className='z-10 bg-white bg-clip-text font-extrabold text-transparent lg:text-xl'>
+          <p className='z-10 bg-gradient-to-r from-amber-700 via-yellow-500 to-amber-500 bg-clip-text text-xl font-black text-transparent lg:text-3xl'>
             FULL-STACK DEVELOPER
           </p>
+
+          <div className='mt-2 flex flex-col items-center gap-2'>
+            <h1 className='my-2'>{'Resume | CV'}</h1>
+
+            <div className='flex gap-2'>
+              <a href='/resume_cv_EN.pdf' download>
+                <Button variant='default' className='flex items-center gap-2 px-4 py-6'>
+                  <FileDownIcon />
+                  <h1 className='font-base flex flex-row items-center gap-2 py-1 text-lg'>
+                    EN
+                  </h1>
+                </Button>
+              </a>
+              <a href='/resume_cv_ES.pdf' download>
+                <Button variant='secondary' className='flex items-center gap-2 px-4 py-6'>
+                  <FileDownIcon />
+                  <h1 className='font-base flex flex-row items-center gap-2 py-1 text-lg'>
+                    ES
+                  </h1>
+                </Button>
+              </a>
+            </div>
+          </div>
 
           <div className='absolute -top-28 right-[25%] size-[70px] rounded-full bg-gradient-to-tr from-zinc-800 from-5% via-black to-black shadow-lg shadow-white' />
           <div className='absolute -bottom-36 left-[15%] size-[50px] rounded-full bg-gradient-to-bl from-amber-800 from-5% via-black to-black shadow-2xl shadow-orange-500' />

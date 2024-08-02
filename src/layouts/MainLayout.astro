@@ -23,20 +23,29 @@ const { title } = Astro.props
   <body id='body' class='dark flex flex-col items-center'>
     <header id='page-header' class='fixed top-0 z-50 w-full p-4'>
       <div
-        class='mx-auto flex w-full max-w-screen-xl flex-row-reverse items-center justify-between md:flex-row lg:px-8'
+        class:list={[
+          'w-full max-w-screen-xl',
+          'mx-auto lg:px-8',
+          'flex flex-row-reverse items-center justify-between md:flex-row'
+        ]}
       >
         <a href='#title'>
           <h1 class='flex flex-row gap-2 text-xl font-bold text-accent-foreground'>
-            @javierllns <GithubIcon /><LinkedinIcon />
+            @javierllns
           </h1>
         </a>
+
         <Nav client:only='react' />
-        <h1
-          class='hidden flex-row items-center gap-2 pb-1 text-xl font-bold text-accent-foreground md:flex'
-        >
-          <span class='hidden [@media(min-width:920px)]:block'>Download</span>
-          CV
-        </h1>
+
+        <div class='hidden gap-3 md:flex'>
+          <a href='https://github.com/javierllns' target='_blank'>
+            <GithubIcon className='hover:stroke-primary' />
+          </a>
+
+          <a href='https://www.linkedin.com/in/javierllns/' target='_blank'>
+            <LinkedinIcon className='hover:stroke-primary' />
+          </a>
+        </div>
       </div>
     </header>
 
