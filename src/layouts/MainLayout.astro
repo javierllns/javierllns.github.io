@@ -73,7 +73,15 @@ const { title } = Astro.props
     const goUpButton = document.getElementById('go-up')
 
     if (header) {
-      header.style.backgroundColor = `hsl(var(--card) / ${scrollOpa})`
+      if (scrollOpa > 0) {
+        header.classList.add('backdrop-blur-md')
+      } else if (scrollOpa == 0) {
+        header.classList.remove('backdrop-blur-md')
+      }
+
+      if (scrollOpa < 0.88) {
+        header.style.backgroundColor = `hsl(var(--card) / ${scrollOpa})`
+      }
     }
 
     if (goUpButton) {

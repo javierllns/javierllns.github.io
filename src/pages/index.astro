@@ -15,9 +15,19 @@ import '@styles/global.css'
     >
       <Section
         id='introduction'
-        class='min-h-[150px] scroll-mt-28 rounded-t-[50px] sm:rounded-t-[7vw]'
+        class:list={['min-h-[150px] scroll-mt-28 rounded-t-[50px] sm:rounded-t-[7vw]']}
       >
-        <h1 class='text-2xl font-bold'>About me</h1>
+        <h1 class='mb-10 text-2xl font-bold'>About me</h1>
+
+        <div
+          class:list={[
+            'via-yellow-500x bg-gradient-to-r from-amber-700 to-amber-500',
+            'overflow-hidden rounded-full',
+            'flex flex-col sm:flex-row'
+          ]}
+        >
+          <img class='size-52' src='/profile_picture.png' alt='profile_picture' />
+        </div>
       </Section>
 
       <Section id='work'>
