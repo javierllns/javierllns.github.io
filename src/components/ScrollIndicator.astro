@@ -26,6 +26,7 @@ const { class: className } = Astro.props
     cursor: pointer;
     position: relative;
     text-align: center;
+    animation: 1.6s ease infinite mouse-body-twinkly;
   }
   .mouse-wheel {
     height: 9px;
@@ -75,6 +76,48 @@ const { class: className } = Astro.props
     100% {
       margin-top: 20px;
       opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes mouse-body-twinkly {
+    0% {
+      opacity: 0.55;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 0.55;
+    }
+  }
+
+  @-moz-keyframes mouse-body-twinkly {
+    0% {
+      opacity: 0.55;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 0.55;
+    }
+  }
+
+  @keyframes mouse-body-twinkly {
+    0% {
+      opacity: 0.55;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 0.55;
     }
   }
 </style>
