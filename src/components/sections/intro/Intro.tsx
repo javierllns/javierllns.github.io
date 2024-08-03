@@ -37,7 +37,7 @@ export default function Intro() {
               <a href='/resume_cv_EN.pdf' download>
                 <Button
                   variant='default'
-                  className='flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-700 to-amber-500 px-4 py-6 hover:opacity-90'
+                  className='flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-700 via-yellow-600 to-amber-400 px-4 py-6 hover:opacity-90'
                 >
                   <FileDownIcon />
                   <h1 className='font-base flex flex-row items-center gap-2 py-1 text-lg'>
