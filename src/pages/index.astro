@@ -21,12 +21,28 @@ import '@styles/global.css'
 
         <div
           class:list={[
-            'via-yellow-500x bg-gradient-to-r from-amber-700 to-amber-500',
-            'overflow-hidden rounded-full',
-            'flex flex-col sm:flex-row'
+            'xbg-green-200 flex flex-col items-center justify-center gap-10 sm:flex-row'
           ]}
         >
-          <img class='size-52' src='/profile_picture.png' alt='profile_picture' />
+          <div
+            class:list={[
+              'size-52 min-h-52 min-w-52',
+              'via-yellow-500x bg-gradient-to-r from-amber-700 to-amber-500',
+              'overflow-hidden rounded-full'
+            ]}
+          >
+            <img class='size-full' src='/profile_picture.png' alt='profile_picture' />
+          </div>
+
+          <p class='text-pretty text-muted-foreground'>
+            <span class='text-2xl text-foreground'>👋 Hi, I'm Javier</span>
+            <br />
+            <br />
+            Full-stack developer with more than 3 years of experience in Web development and
+            great general interest in software development accompanied by best practices, Constantly
+            updating, with great ability to adapt and attention to detail, tested in dynamic
+            environments and high demands.
+          </p>
         </div>
       </Section>
 
@@ -65,7 +81,7 @@ import '@styles/global.css'
                 At Softlabs Colombia SAS, freelance.
               </h3>
               <p
-                class='mb-4 mt-2 text-justify text-sm font-normal text-muted-foreground sm:text-base'
+                class='mb-4 mt-2 text-pretty text-sm font-normal text-muted-foreground sm:text-base'
               >
                 Full-Stack Developer, working on the design and construction of scalable
                 business solutions. Mostly oriented to Web Technologies and the
@@ -102,7 +118,7 @@ import '@styles/global.css'
                 At VTEX COL, freelance.
               </h3>
               <p
-                class='mb-4 mt-2 text-justify text-sm font-normal text-muted-foreground sm:text-base'
+                class='mb-4 mt-2 text-pretty text-sm font-normal text-muted-foreground sm:text-base'
               >
                 Developer of a web-based live sales management application (plugin), using
                 React with Typescript, NodeJS, AWS services, Bootstrap+CSS and the Web
@@ -129,7 +145,7 @@ import '@styles/global.css'
                 Independent professional.
               </h3>
               <p
-                class='mb-4 mt-2 text-justify text-sm font-normal text-muted-foreground sm:text-base'
+                class='mb-4 mt-2 text-pretty text-sm font-normal text-muted-foreground sm:text-base'
               >
                 Frontend web development, and collaboration for the migration of ERP
                 program to web technologies (React, Typescript, Bootstrap) using
