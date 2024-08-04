@@ -1,6 +1,7 @@
 import { defineCollection, z } from 'astro:content'
 
 const experienceCollection = defineCollection({
+  type: 'data',
   schema: z.object({
     dates: z.string(),
     location: z.string(),

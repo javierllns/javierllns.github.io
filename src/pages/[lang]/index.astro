@@ -4,6 +4,16 @@ import Intro from '@components/sections/intro/Intro'
 import Section from '@components/sections/BaseSection.astro'
 import ScrollIndicator from '@components/ScrollIndicator.astro'
 import '@styles/global.css'
+
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const experienceList = await getCollection('experience')
+
+  console.log(experienceList)
+
+  return [{ params: { lang: 'en' } }, { params: { lang: 'es' } }]
+}
 ---
 
 <Layout title="Javier's Portfolio">
@@ -19,7 +29,7 @@ import '@styles/global.css'
     >
       <Section
         id='introduction'
-        class:list={['min-h-[150px] scroll-mt-28 rounded-t-[50px] sm:rounded-t-[7vw]']}
+        class='min-h-[150px] scroll-mt-28 rounded-t-[50px] pb-24 sm:rounded-t-[7vw] sm:pt-20'
       >
         <h1 class='mb-10 text-2xl font-bold'>About me</h1>
 
