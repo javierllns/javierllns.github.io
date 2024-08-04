@@ -1,0 +1,7 @@
+{
+  "dates": "2024/01 - ACTUALIDAD",
+  "location": "Cartagena, Colombia",
+  "charge": "Full-stack Developer - Freelance (Certificada).",
+  "at": "En Softlabs Colombia SAS, freelance.",
+  "description": "Desarrollador Full-Stack, trabajando en el diseño y construcción de soluciones de negocio escalables. Mayoritariamente orientado a las Tecnologías Web y a la digitalización de los negocios. Destaco haber diseñado e implementado un web-service (un aplicativo API backend deamonizado) encargado de hacer de puente para conectar el Software ERP de un cliente con su nueva elección de proveedor de facturación electrónica. Desarrollado en Typescript y desplegado como un ejecutable único aprovechando una de las ultimas características de vanguardia de NodeJS, hablo de SEA (Single Executable Applications), tambien contó con un dashboard desarrollado en React. También estuve encargado de desarrollar varios otros proyectos frontend (un portal de consulta de resultados para pacientes de laboratorio clínico, y una aplicación web para la gestión de inventarios y llenado de cilindros de gas, esta ultima usada por importantes empresas del rubro en la costa caribe)."
+}
