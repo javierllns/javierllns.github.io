@@ -1,0 +1,44 @@
+---
+type Props = {
+  experience_data_list: EXPERIENCE_DATA[]
+}
+
+const { experience_data_list } = Astro.props
+---
+
+<>
+  <div class='relative'>
+    <!-- https://react.keepdesign.io/docs/components/timeline -->
+    <div
+      id='timeline-overlay'
+      class='absolute -left-4 z-10 flex h-full w-8 flex-col justify-between bg-transparent'
+    >
+      <div class='h-16 w-full bg-gradient-to-b from-background to-transparent'></div>
+      <div class='h-16 w-full bg-gradient-to-t from-background to-transparent'></div>
+    </div>
+
+    <ol class='relative border-s border-foreground/30 py-16'>
+      {
+        experience_data_list.map((experience) => {
+          return (
+            <li class='mb-10 ms-4'>
+              <div class='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-muted-foreground bg-foreground'></div>
+
+              <div class='mb-4 flex flex-col justify-between gap-1 pt-1.5 text-sm font-normal leading-none text-muted-foreground sm:flex-row'>
+                <p>{experience.dates}</p>
+                <p>{experience.location}</p>
+              </div>
+              <h3 class='text-xl font-semibold text-foreground sm:text-2xl'>
+                {experience.charge}
+              </h3>
+              <h3 class='text-lg font-semibold text-muted-foreground'>{experience.at}</h3>
+              <p class='mb-4 mt-2 text-pretty text-sm font-normal text-muted-foreground sm:text-base'>
+                {experience.description}
+              </p>
+            </li>
+          )
+        })
+      }
+    </ol>
+  </div>
+</>
