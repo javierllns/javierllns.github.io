@@ -1,6 +1,10 @@
 import { ParticlesComponent } from './Particles'
 import { Button } from '@components/lib/ui/button'
 import { FileDownIcon } from 'lucide-react'
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
+
+const lang = getLangFromUrl(window.location as any) //TODO: type as URL object
+const t = useTranslations(lang)
 
 // const BlurredItem: React.FC<{ children: React.ReactNode; className?: string; blurClassName?: string }> = ({
 //   children,
@@ -31,7 +35,7 @@ export default function Intro() {
           </p>
 
           <div className='mt-2 flex flex-col items-center gap-2'>
-            <h1 className='my-2'>{'Resume | CV'}</h1>
+            <h1 className='my-2'>{t('section.title.resume')}</h1>
 
             <div className='flex gap-2'>
               <a href='/resume_cv_EN.pdf' download>

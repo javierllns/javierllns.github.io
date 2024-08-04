@@ -5,3 +5,8 @@ interface EXPERIENCE_DATA {
   at: string
   description: string
 }
+
+interface ABOUT_ME_DATA {
+  title: string
+  description: string
+}

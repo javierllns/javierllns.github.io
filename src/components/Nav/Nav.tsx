@@ -9,6 +9,10 @@ import {
 } from '@components/lib/ui/sheet'
 import { MenuIcon } from 'lucide-react'
 import { Separator } from '@components/lib/ui/separator'
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
+
+const lang = getLangFromUrl(window.location as any) //TODO: type as URL object
+const t = useTranslations(lang)
 
 export const Nav: React.FC = () => {
   const [openOffCanvasMenu, setOpenOffCanvasMenu] = useState(false)
@@ -33,22 +37,22 @@ export const Nav: React.FC = () => {
     return (
       <ul className='flex h-full flex-col gap-2 md:flex-row md:gap-0'>
         <li>
-          <NavItem title='About me' href='#introduction' />
+          <NavItem title={t('nav.link.about')} href='#about' />
         </li>
         <li>
-          <NavItem title='Work' href='#work' />
+          <NavItem title={t('nav.link.experience')} href='#experience' />
         </li>
         <li>
-          <NavItem title='Tech Stack' href='#stack' />
+          <NavItem title={t('nav.link.stack')} href='#stack' />
         </li>
         <li>
-          <NavItem title='Tooling' href='#tooling' />
+          <NavItem title={t('nav.link.tooling')} href='#tooling' />
         </li>
         <li>
-          <NavItem title='Projects' href='#projects' />
+          <NavItem title={t('nav.link.projects')} href='#projects' />
         </li>
         <li>
-          <NavItem title='Contact' href='#contact' />
+          <NavItem title={t('nav.link.contact')} href='#contact' />
         </li>
       </ul>
     )
@@ -76,7 +80,7 @@ export const Nav: React.FC = () => {
           <SheetContent side='top' id='off-canvas-menu' className='rounded-b-lg p-10'>
             <SheetHeader>
               <SheetTitle className='pb-2 text-2xl font-bold uppercase'>
-                Navigation
+                {t('nav.title')}
               </SheetTitle>
               <Separator className='!mb-3' />
               <Locations />
