@@ -2,6 +2,7 @@
 import { Nav } from '@components/nav/Nav'
 import { Button } from '@components/lib/ui/button'
 import { ArrowUpIcon, GithubIcon, LinkedinIcon } from 'lucide-react'
+import { LanguagePicker } from '@components/LanguagePicker'
 
 interface Props {
   lang?: string
@@ -48,6 +49,8 @@ const { lang, title } = Astro.props
           </a>
         </div>
       </div>
+
+      <LanguagePicker client:only={'react'} />
     </header>
 
     <main class='w-full max-w-screen-xl'>
