@@ -1,6 +1,6 @@
 {
-  "cSpell.words": ["rellax"],
-  
+  "cSpell.words": ["aboutme", "rellax"],
+
   "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"

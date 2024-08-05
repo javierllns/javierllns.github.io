@@ -4,14 +4,15 @@ import { Button } from '@components/lib/ui/button'
 import { ArrowUpIcon, GithubIcon, LinkedinIcon } from 'lucide-react'
 
 interface Props {
-  title: string
+  lang?: string
+  title?: string
 }
 
-const { title } = Astro.props
+const { lang, title } = Astro.props
 ---
 
 <!doctype html>
-<html class='scroll-smooth' lang='en'>
+<html class='scroll-smooth' lang={lang ?? 'en'}>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content='Astro description' />

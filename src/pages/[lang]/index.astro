@@ -13,6 +13,7 @@ const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 
 interface Props {
+  aboutme: ABOUT_ME_DATA[]
   experience: EXPERIENCE_DATA[]
 }
 
@@ -20,11 +21,9 @@ export async function getStaticPaths() {
   const languages = Object.keys(availableLanguages)
 
   const experienceCollection = await getCollection('experience')
-  const aboutMeCollection = await getCollection('aboutMe')
+  const aboutMeCollection = await getCollection('aboutme')
 
   return languages.map((lang) => {
-    //
-
     const experience = experienceCollection
       .filter((exp) => {
         const [expLang, ..._] = exp.id.split('/')
@@ -34,14 +33,23 @@ export async function getStaticPaths() {
         return exp.data
       })
 
-    return { params: { lang }, props: { experience } }
+    const aboutme = aboutMeCollection
+      .filter((exp) => {
+        const [expLang, ..._] = exp.id.split('/')
+        return expLang == lang
+      })
+      .map((exp) => {
+        return exp.data
+      })
+
+    return { params: { lang }, props: { aboutme, experience } }
   })
 }
 
-const { experience } = Astro.props
+const { aboutme, experience } = Astro.props
 ---
 
-<Layout title="Javier's Portfolio">
+<Layout lang={lang} title="Javier's Portfolio">
   <div class='flex flex-col'>
     <!-- Title section -->
     <section id='title' class='relative h-[100vh] scroll-mt-20'>
@@ -79,13 +87,10 @@ const { experience } = Astro.props
           </div>
 
           <p class='text-pretty text-muted-foreground'>
-            <span class='text-2xl text-foreground'>👋 Hi, I'm Javier</span>
+            <span class='text-2xl text-foreground'>{aboutme[0].title}</span>
             <br />
             <br />
-            Full-stack developer with more than 3 years of experience in Web development and
-            great general interest in software development accompanied by best practices, Constantly
-            updating, with great ability to adapt and attention to detail, tested in dynamic
-            environments and high demands.
+            {aboutme[0].description}
           </p>
         </div>
       </StandardSectionWrapper>

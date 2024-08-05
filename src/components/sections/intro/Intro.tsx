@@ -26,7 +26,7 @@ export default function Intro() {
         <ParticlesComponent className='absolute size-full' />
 
         <div className='relative flex flex-col items-center gap-2'>
-          <h1 className='bg-gradient-to-r from-zinc-500 via-white to-blue-100 bg-clip-text px-14 text-center text-7xl font-black text-transparent sm:text-6xl sm:font-bold md:text-7xl lg:text-8xl'>
+          <h1 className='bg-gradient-to-r from-zinc-500 via-white to-blue-100 bg-clip-text text-center text-7xl font-black text-transparent sm:text-6xl sm:font-bold md:text-7xl lg:text-8xl'>
             JAVIER LLANOS
           </h1>
 
