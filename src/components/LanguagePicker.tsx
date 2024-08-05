@@ -1,4 +1,4 @@
-import { useEffect, useState, FC } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Select,
   SelectContent,
@@ -11,7 +11,7 @@ import {
 import { languages } from '@i18n/ui'
 import { getLangFromUrl, useTranslations } from '@i18n/utils'
 
-export const LanguagePicker: FC<{ className?: string }> = () => {
+export const LanguagePicker: React.FC<{ className?: string }> = () => {
   const [lang, setLang] = useState('en')
 
   useEffect(() => {
